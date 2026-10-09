@@ -13,9 +13,9 @@ const Blog = () => {
   const [allBlogs, setAllblogs] = useState([])
   const [selectdBlogs, setSelectdblogs] = useState(null)
 
-  const API_URL = import.meta.env.VIT_NODE_ENV === "development"
-    ? import.meta.env.VIT_LOCAL_URL
-    : import.meta.env.VIT_LIVE_URL
+  const API_URL = import.meta.env.VITE_NODE_ENV === "development"
+    ? import.meta.env.VITE_LOCAL_URL
+    : import.meta.env.VITE_LIVE_URL
 
   const schema = z.object({
     title: z.string().min(3),
