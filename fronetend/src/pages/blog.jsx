@@ -51,7 +51,7 @@ const Blog = () => {
 
   const creatBlog = async blogData => {
 
-    await axios.post(`${API_URL}/create`, blogData)
+    await axios.post(`${API_URL}/blog/create`, blogData)
     try {
       toast.success("Blog create success")
       readBlog()
@@ -79,7 +79,7 @@ const Blog = () => {
 
   const removeBlog = async (id) => {
     try {
-      await axios.delete(`${API_URL}/remove/${id}`)
+      await axios.delete(`${API_URL}/blog/remove/${id}`)
 
       toast.success("Blog remove success")
       readBlog()
@@ -90,7 +90,7 @@ const Blog = () => {
   }
   const modifyBlog = async (id, blogData) => {
     try {
-      await axios.put(`${API_URL}/modify/${id}`, blogData)
+      await axios.put(`${API_URL}/blog/modify/${id}`, blogData)
 
       toast.success("Blog update success")
       readBlog()
